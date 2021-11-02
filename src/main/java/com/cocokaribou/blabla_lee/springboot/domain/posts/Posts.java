@@ -10,6 +10,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity // 테이블과 링크될 클래스 ex) SalesManager.java -> sales_manager table
 public class Posts {
+    //데이터베이스와 맞닿아있기 때문에 request, response 사용x
+    //data layer
 
     @Id // PK 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
@@ -28,5 +30,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
     }
 }

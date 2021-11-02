@@ -18,6 +18,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
 
+    //@WebMvcTest: JPA(db통신) 기능이 작동하지 않기 때문에 사용
+
     @Autowired // bean 주입
     private MockMvc mvc; // 웹 api 테스트
 
